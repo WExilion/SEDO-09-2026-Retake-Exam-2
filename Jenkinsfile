@@ -2,6 +2,10 @@ pipeline {
 
     agent any
 
+    environment {
+        DOTNET_ROLL_FORWARD = 'Major'
+    }
+
     stages {
         stage('Restore dependencies') {
             when { branch 'main' }
